@@ -1,0 +1,623 @@
+/* CSS du Projet 1
+Site de la WebAgency */
+
+
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+.body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+H1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+H2 {
+  text-align: left;
+}
+
+p {
+  text-align: center;
+}
+
+.logo {
+  width:50%;
+  height:50px;
+  margin: 5px 15px 15px 15px;
+}
+
+.logo img {
+ margin: 5px 15px 25px 80px;
+ width:50%;
+}
+
+/* slider */
+div#slider
+{
+  width: 100%;
+  max-width: 1290px;
+  margin-top: 20px;
+}
+
+div#slider figure
+{
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: left;
+}
+
+div#slider figure img
+  {
+    width: 50%;
+    height: auto;
+    float: left;
+  }
+
+div#slider
+  {
+    width: 100%;
+    max-width: 1290px;
+    overflow: hidden;
+  }
+
+@keyframes slidy {
+  0% { left: 0%; }
+  /* 20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; } */
+  50% { left: -300%; }
+  100% { left: -400%; }
+}
+
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 30s slidy infinite;
+}
+
+.services-image {
+  width: 50%;
+  text-align: center;
+}
+
+.services2 {
+  width:50%;
+  text-align: left;
+  margin-top: 70px;
+}
+
+.services2 p {
+  text-align: left;
+  text-indent: 0.1em;
+}
+
+.icon li {
+    list-style-type: none;
+}
+
+/* icônes fontawesome pour la partie services */
+
+ /*ul.icon li.chart:before
+ {
+   font-family: fontawesome;
+   content: "\f201";
+   color: #5CADD3;
+   float: left;
+   width: 1em;
+   height: 1em;
+   font-size: 35px;
+   border-radius: 60px;
+   box-shadow: 0px 0px 2px #888;
+   padding: 0.5em 0.5em;
+   text-indent: -0.1em;
+ }*/
+
+ ul.icon li.cubes:before
+ {
+   font-family: fontawesome;
+   content: "\f1b3";
+   color: #5CADD3;
+   float: left;
+   width: 1em;
+   height: 1em;
+   font-size: 35px;
+   border-radius: 60px;
+   box-shadow: 0px 0px 2px #888;
+   padding: 0.5em 0.5em;
+   text-indent: -0.1em;
+  }
+
+ ul.icon li.chart-pie:before
+ {
+   font-family: fontawesome;
+   content: "\f200";
+   color: #5CADD3;
+   float: left;
+   width: 1em;
+   height: 1em;
+   font-size: 35px;
+   border-radius: 60px;
+   box-shadow: 0px 0px 2px #888;
+   padding: 0.5em 0.5em;
+   text-indent: 0.1em;
+ }
+
+#sec1 {
+  display: flex;
+}
+
+.section3 {
+  display: flex;
+  width: 100%;
+}
+
+#projets {
+  background-color: #F5F5F5;
+}
+
+/* menu principal */
+ .menu {
+   width: 1290px;
+   justify-content: center;
+   align-items: center;
+ }
+
+/* menu du portfolio */
+  .menu2 {
+    width: 100%;
+    list-style-type:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .menu2 a {
+   background-color: #E5E5E5;
+   color: black;
+   text-decoration: none;
+   text-align: center;
+   }
+
+.menu2 a:hover {
+ width: 130px;
+ padding: 15px;
+ background-color: #5CADD3;
+ color: #ffffff;
+ border-bottom-style: solid;
+ border-bottom-color: #468CAD;
+ }
+
+ .w3-button.w3-black {
+   width: 130px;
+   padding: 15px;
+   background-color: #E5E5E5;
+   color:black;
+   text-decoration: none;
+   text-align: center;
+ }
+
+/* .trait {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+} */
+
+/* .hr {
+  display: inline-block;
+  text-align: center;
+} */
+
+/* .icone {
+  width: 100%;
+  text-align: center;
+} */
+
+.design1 {
+  display: flex;
+}
+
+.sigle {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* icone et point dans nos services */
+.separator2 {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border-radius: 100%;
+  margin-left: 50%;
+}
+
+.separator2::before {
+  content: '';
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  right: 25px;
+  top: calc(50% - 1px);
+  color: #e2e2e2;
+}
+
+.separator2, .separator2::before {
+  background-color: #5cadd3;
+}
+
+
+/* rond/trait sous les titres */
+.separator {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border-radius: 100%;
+  margin-left: 50%;
+  background-color: #5cadd3;
+}
+
+.separator::before {
+  content: '';
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  right: 25px;
+  top: calc(50% - 1px);
+  background-color: #e2e2e2;
+}
+
+.separator::after {
+  content: '';
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  left: 25px;
+  top: calc(50% - 1px);
+  background-color: #e2e2e2;
+}
+
+.titre1 {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rond {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+
+.present {
+    text-align: left;
+    margin-left: 15px;
+}
+
+/* navigation menu principal */
+ .nav {
+   width: 50%;
+   height: 45px;
+   list-style: none;
+ }
+
+/* navigation menu portfolio */
+.projet_menu nav {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.portfolio {
+  width: 100%;
+  height: 350px;
+  padding: 15px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.row {
+  padding: 5px;
+}
+
+.column {
+    padding: 5px;
+    float: left;
+    width: 25%;
+}
+
+.column p {
+  text-align: left;
+}
+
+.presentation {
+  display: flex;
+}
+
+.texte {
+  width: 75%;
+  display: block;
+  text-align: left;
+  margin: 20px;
+  padding-top: 10px;
+}
+
+.icone1 {
+  display: block;
+  text-align: right;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+/* images du portfolio */
+.figure {
+  padding: 10px;
+  margin: 15px;
+  width: 25%;
+}
+
+.nav ul li {
+    float:left;
+    font-size:16px;
+    margin:13px 22px;
+    list-style:none;
+  }
+
+.nav a:link {
+    text-decoration: none;
+    color: black;
+  }
+
+.nav a:hover, a:active {
+  border-top: 3px solid #5CADD3;
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+ ul.icon li
+ {
+ 	text-indent: -1.4em;
+  padding: 20px;
+ }
+
+figure {
+  width:100%;
+  position:relative;
+}
+
+figcaption {
+opacity: 0;
+text-align: left;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+figure:hover figcaption {
+  height: 40%;
+  color: white;
+  transition:all 1s;
+  opacity:1;
+  padding: 0px;
+  margin: 0px;
+  background-color: rgba(219, 203, 203, 0.5);
+}
+
+.figcaption p {
+  text-align: left;
+}
+
+.titre1 .fa-circle {
+  text-align: center;
+  font-family: fontawesome;
+  color: #5CADD3;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.5em;
+}
+
+.design1 .fa-circle {
+  text-align: center;
+  font-family: fontawesome;
+  color: #5CADD3;
+}
+
+.design1 .fa-chart-pie {
+    color: #5CADD3;
+    float: left;
+    width: 2em;
+    height: 2em;
+    font-size: 25px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.5em;
+}
+
+.design1 .fa-chart-line {
+    color: #5CADD3;
+    float: left;
+    width: 2em;
+    height: 2em;
+    font-size: 25px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.5em;
+}
+
+.design1 .fa-cubes {
+    color: #5CADD3;
+    float: left;
+    width: 2em;
+    height: 2em;
+    font-size: 25px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.5em;
+}
+
+.fa-eye {
+  text-align: right;
+}
+
+.portfolio .fas {
+  color: white;
+  background-color: #448FB1;
+  border: 2px solid white;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px white;
+  padding: 0.5em 0.5em;
+}
+
+.carte {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.plan {
+  position: absolute;
+  z-index: 0;
+}
+
+.sur-plan {
+  width: 100%;
+  height: 650px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  background-color: rgba(102, 149, 232, 0.3);
+  z-index: 1;
+}
+
+.form {
+  padding: 15px;
+  margin: 25px;
+  margin-top: 45px;
+  margin-right: 130px;
+  background-color: rgba( 242, 243, 251, 0.9);
+  position: relative;
+  width: 400px;
+  height: 540px;
+  border-radius:5px;
+  float: right;
+  z-index: 2;
+}
+
+input, textarea {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+button {
+  width: 45%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #5cadd3;
+  color: white;
+  border-radius:3px;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-color: #4494bb;
+}
+
+.button1 .w3-button {
+  border-radius: 3px 0 0 3px;
+}
+
+.button4 .w3-button {
+  border-radius: 0 3px 3px 0;
+}
+
+strong {
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+.form p {
+  margin: 0px;
+  padding: 0px;
+  color: #64686d;
+}
+
+fieldset {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+legend {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+fieldset p {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+.iframe {
+  border: 0;
+}
+
+hr {
+  display: block;
+  width: 10%;
+  color: #F7F7F7;
+}
+
+.projets1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.services1 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.menu2 button {
+
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
