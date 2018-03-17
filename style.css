@@ -233,6 +233,19 @@ div#slider figure {
 .sigle {
   display: inline-block;
   vertical-align: top;
+  padding-right: 20px;
+}
+
+.sigle::after {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 100%;
+  margin-left: 51.4%;
+  margin-top: 1.3%;
+  background-color: #5cadd3;
+  content: '';
+  left: 25px;
 }
 
 /* icone et point dans nos services */
@@ -242,16 +255,18 @@ div#slider figure {
   position: relative;
   border-radius: 100%;
   margin-left: 50%;
+  background-color: #5cadd3;
 }
 
 .separator2::before {
-  content: '';
+  font-family: fontawesome;
+  content: '\f200';
   width: 70px;
-  height: 1px;
+  height: 3px;
   position: absolute;
   right: 25px;
   top: calc(50% - 1px);
-  color: #e2e2e2;
+  color: #5cadd3;
 }
 
 .separator2, .separator2::before {
@@ -299,12 +314,14 @@ div#slider figure {
 .rond {
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
+  margin-top: 15px;
 }
 
 .present {
     text-align: left;
     margin-left: 15px;
+    margin-top: -15px;
+    padding: 0;
 }
 
 /* navigation menu principal */
