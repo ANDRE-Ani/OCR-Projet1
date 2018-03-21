@@ -171,13 +171,14 @@ div#slider figure {
 
 /* menu du portfolio */
   .menu2 {
-    /*margin: auto;*/
-    /* width: 50%; */
-    display: block;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
   }
 
   .menu2 a {
-    display: block;
+    display: inline-block;
     background-color: #E5E5E5;
     color: black;
     text-decoration: none;
@@ -185,7 +186,7 @@ div#slider figure {
    }
 
 .menu2 a:hover {
-  display: block;
+  display: inline-block;
   background-color: #5CADD3;
   color: #ffffff;
   border-bottom-style: solid;
@@ -312,11 +313,16 @@ div#slider figure {
 
 .portfolio {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin: 20px;
+  margin-top: 25px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
+.m-portfolio {
+  margin: -4px;
+}
 .column {
     padding: 5px;
     float: left;
@@ -484,27 +490,32 @@ figure:hover figcaption {
   padding-left: 0px;
 }
 
+
 .carte {
   width: 100%;
   margin: 0px;
+  position: absolute;
 }
 
-.iframe {
-  z-index: 0;
-  border: 0;
+/* .iframe {
+  border: 0px;
   width: 100%;
   position: relative;
-
-}
-
-/* .plan {
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  color: rgba(6, 61, 164, 0.5);
 } */
 
+.plan {
+  border: 0px;
+  width: 100%;
+  position: relative;
+  width: 100%;
+  border: 0px;
+  z-index: 1;
+  /* background-color: rgba(51, 85, 255, 0.5); */
+  /* opacity: 0.9; */
+}
+
 .form {
+  z-index: 2;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -516,7 +527,6 @@ figure:hover figcaption {
   width: 30%;
   height: 540px;
   border-radius:5px;
-  z-index: 1;
 }
 
 input, textarea {
@@ -542,15 +552,15 @@ button {
     padding: 10px;
 }
 
-.button1 .w3-button {
+/* .button1 .w3-button {
   border-radius: 3px 0 0 3px;
-}
+} */
 
-.button4 .w3-button {
+/* .button4 .w3-button {
   border-radius: 0 3px 3px 0;
-}
+} */
 
-.button1 {
+/* .button1 {
   width: 100px;
   margin: auto;
 }
@@ -568,7 +578,7 @@ button {
 .button4 {
   width: 100px;
   margin: auto;
-}
+} */
 
 strong {
     font-weight: bold;
@@ -636,6 +646,16 @@ hr {
   height: auto;
   padding: 15px;
   text-align: center;
+
+  margin-left: -4px;
+}
+
+.w3-button.w3-black:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.w3-button.w3-black:last-child {
+  border-radius: 0 3px 3px 0;
 }
 
 .w3-button.w3-black:hover:after {
@@ -646,14 +666,19 @@ hr {
 	height: 0;
 	width: 0;
 	position: absolute;
+
+  border-color: rgba(92, 173, 211, 0);
+  border-top-color: #468cad;
+  border-width: 10px;
+  margin-left: -10px;
 }
 
-.w3-button.w3-black:hover:after {
+/*.w3-button.w3-black:hover:after {
 	border-color: rgba(92, 173, 211, 0);
   border-top-color: #468cad;
 	border-width: 10px;
 	margin-left: -10px;
-}
+}*/
 
 
 
