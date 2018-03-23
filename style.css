@@ -504,16 +504,21 @@ figure:hover figcaption {
 .plan {
   position: absolute;
   width: 100%;
-  /* background-color: rgba(0,0,0,0.5);
-  opacity: 0.5; */
 }
 
- #overlay {
+
+
+.plan::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  border: 0px;
-  background-color: blue;
-  opacity: 0.4;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background: rgba(25, 121, 229, 0.3);
+  pointer-events: none;
+}
+
+.iframe {
+  pointer-events: initial;
 }
 
 .form {
