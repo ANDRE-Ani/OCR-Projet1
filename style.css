@@ -506,13 +506,13 @@ figure:hover figcaption {
   width: 100%;
 }
 
-
-
 .plan::before {
   content: "";
   position: absolute;
-  left: 0; right: 0;
-  top: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background: rgba(25, 121, 229, 0.3);
   pointer-events: none;
 }
@@ -690,6 +690,10 @@ Ordinateurs (992 px - 1199 px)
     margin: auto;
   }
 
+  .nav {
+  display: none;
+  }
+
   #slider {
     display: none;
   }
@@ -706,7 +710,7 @@ Ordinateurs (992 px - 1199 px)
   }
 
   .services-image img {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 
@@ -833,6 +837,14 @@ Ordinateurs (992 px - 1199 px)
     font-family: 'Roboto', sans-serif;
   }
 
+  .sec1 {
+    width: 25%;
+  }
+
+  .nav {
+    width: 75%;
+  }
+
   .section3 {
     display: flex;
     flex-direction: column;
@@ -864,4 +876,16 @@ Ordinateurs (992 px - 1199 px)
       height: 100%;
       }
 
+      .form {
+        position: absolute;
+        width: 30%;
+        margin: 0px;
+        padding: 10px;
+        float: right;
+      }
+
+    .carte {
+      width: 100%;
+      height: auto;
+    }
 }
