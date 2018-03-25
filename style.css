@@ -73,13 +73,18 @@ div#slider {
 @keyframes slidy {
   0% { left: 0%; }
   20% { left: 0%; }
-  25% { left: -100%; }
+  /* 25% { left: -100%; }
   45% { left: -100%; }
   50% { left: -200%; }
   70% { left: -200%; }
   75% { left: -300%; }
   95% { left: -300%; }
-  100% { left: -400%; }
+  100% { left: -400%; } */
+  25% { left: -0%; }
+  45% { left: -0%; }
+  50% { left: -100%; }
+  85% { left: -100%; }
+  100% { left: -100%; }
 }
 
 div#slider figure {
