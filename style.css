@@ -71,13 +71,6 @@ div#slider {
   20% {
     left: 0%;
   }
-  /* 25% { left: -100%; }
-  45% { left: -100%; }
-  50% { left: -200%; }
-  70% { left: -200%; }
-  75% { left: -300%; }
-  95% { left: -300%; }
-  100% { left: -400%; } */
   25% {
     left: -0%;
   }
@@ -105,6 +98,7 @@ div#slider figure {
   text-align: left;
   animation: 20s slidy infinite;
 }
+
 
 /* menu hamburger */
 
