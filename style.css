@@ -35,13 +35,72 @@ p {
 
 .logo {
   width: 50%;
-  margin: 20px 15px 15px 85px;
+  margin: 20px 15px 15px 145px;
+}
+
+.menuh {
+  display: none;
 }
 
 /* slider */
 
+.textet {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 90px;
+  margin-top: 100px;
+}
+
+.textet .w3-button.w3-black {
+  background: #5cadd3;
+  color: white;
+  text-align: center;
+  top: 100px;
+  width: 100px;
+  height: auto;
+  font-weight: bold;
+  border-radius: 15px;
+  border-bottom: 2px solid #4494bb;
+}
+
+
 .slider {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+#slider aside {
+  position: absolute;
+  width: 100%;
+  margin-top: 90px;
+  text-align: left;
+  margin-left: 70px;
+}
+
+#slider p {
+  position: absolute;
+  margin-top: 100px;
+  font-size: 15px;
+  color: white;
+  text-align: left;
+  margin-left: 70px;
+}
+
+
+#slider H1 {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  margin-left: 70px;
+}
+
+#slider strong {
+  color: #5cabcf;
 }
 
 div#slider figure {
@@ -99,15 +158,38 @@ div#slider figure {
   animation: 20s slidy infinite;
 }
 
+.chevron1 {
+  position: absolute;
+  margin-top: 200px;
+  color: white;
+  float: left;
+  font-size: 45px;
+  margin-left: -25px;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px #181c25;
+  padding: 0.5em 0.8em;
+  background-color: rgba( 48, 33, 29, 0.4 );
+}
 
-/* menu hamburger */
-
-/*#nav-left {
-  display: none;
-}*/
-
-
-/* fin menu hamburger */
+.chevron2 {
+  position: absolute;
+  margin-top: -250px;
+  margin-left: 95%;
+  color: white;
+  float: right;
+  font-size: 45px;
+  margin-right: 0px;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px #181c25;
+  padding: 0.5em 0.5em;
+  background-color: rgba( 48, 33, 29, 0.5 );
+}
 
 .services-image {
   width: 50%;
@@ -316,6 +398,7 @@ ul.icon li.chart-pie:before {
   height: 45px;
   list-style: none;
   margin-top: 20px;
+  right: 30px;
 }
 
 .projet_menu {
@@ -639,6 +722,7 @@ hr {
   padding: 15px;
   text-align: center;
   margin-left: -4px;
+  border-bottom: 3px solid #f5f5f5;
 }
 
 .w3-button.w3-black:first-child {
@@ -664,11 +748,6 @@ hr {
 }
 
 
-
-
-
-
-
 /* menu hamburger */
 
 a {
@@ -677,15 +756,14 @@ a {
 }
 
 nav {
-    background: #2980b9;
+    background: #3491b2;
     left: 0;
     position: fixed;
-    height: 100%;
+    height: 300px;
     top: 0;
     left: -395px;
     width: 400px;
     z-index: 999;
-
     transition: left 0.75s;
     box-shadow: 3px 0 10px rgba(0,0,0,0.2);
 }
@@ -718,16 +796,13 @@ nav {
     position: absolute;
     right: 1%;
     top: 0;
-
-    /* Evite la séléction du texte au double clic */
     -webkit-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 25px;
+    line-height: 25px;
 }
 
 #nav-left:target {
@@ -745,36 +820,7 @@ nav {
   display: none;
 }
 
-/*  @media only screen and (max-width: 960px) {
-
-    #wrapper {
-        width: 96%;
-        margin: 0 1%;
-        padding: 0 1%;
-    }
-
-} */
-
-/* @media only screen and (max-width: 400px) {
-
-    nav {
-        width: 100%;
-    }
-
-} */
-
 /* fin menu hamburger */
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -806,9 +852,17 @@ Ordinateurs (992 px - 1199 px)
     font-family: 'Roboto', sans-serif;
   }
 
-  /* #navigation {
-    display: inline;
-  } */
+  .menuh {
+    display: contents;
+  }
+
+  .chevron1 {
+    display: none;
+  }
+
+  .chevron2 {
+    display: none;
+  }
 
   /* menu hamburger */
 
@@ -818,7 +872,8 @@ Ordinateurs (992 px - 1199 px)
   }
 
   nav {
-      background: #2980b9;
+      /* background: #2980b9; */
+      background: #3491b2;
       left: 0;
       position: fixed;
       height: 100%;
@@ -860,7 +915,6 @@ Ordinateurs (992 px - 1199 px)
       right: 1%;
       top: 0;
 
-      /* Evite la séléction du texte au double clic */
       -webkit-user-select: none;
       -moz-user-select: none;
       -khtml-user-select: none;
@@ -885,24 +939,6 @@ Ordinateurs (992 px - 1199 px)
   #nav-left:target ~ * .open-menu {
   	display: none;
   }
-
-/*  @media only screen and (max-width: 960px) {
-
-      #wrapper {
-          width: 96%;
-          margin: 0 1%;
-          padding: 0 1%;
-      }
-
-  } */
-
-  /* @media only screen and (max-width: 400px) {
-
-      nav {
-          width: 100%;
-      }
-
-  } */
 
 /* fin menu hamburger */
 
@@ -938,6 +974,7 @@ Ordinateurs (992 px - 1199 px)
     width: 100%;
     text-align: center;
     margin-top: 70px;
+    margin: 20px;
   }
   .menu2 {
     display: flex;
@@ -985,10 +1022,10 @@ Ordinateurs (992 px - 1199 px)
     border-width: 10px;
     margin-left: -10px;
   }
+
   .plan {
     position: relative;
     padding-bottom: 75%;
-    height: 0;
     overflow: hidden;
   }
   .plan iframe {
@@ -998,27 +1035,33 @@ Ordinateurs (992 px - 1199 px)
     width: 100%;
     height: 100%;
   }
+
   .form {
     width: 100%;
     margin: 0px;
     padding: 10px;
   }
-  .column {
-    width: 90%;
+
+  .carte {
+    width: 80%;
+    height: auto;
   }
+
+  .column {
+    width: 100%;
+  }
+
   .portfolio {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 750px;
   }
+
   .menu2 {
     width: 100%;
     margin: auto;
   }
-  .carte {
-    width: 100%;
-    height: auto;
-  }
+
 }
 
 /* media queries responsive pour les tablettes */
@@ -1055,8 +1098,17 @@ Ordinateurs (992 px - 1199 px)
   .services2 {
     width: 100%;
     text-align: center;
-    margin: 0px;
+    margin: 30px;
   }
+
+  .portfolio img {
+    width: 50%;
+  }
+
+  .column {
+    width: 50%;
+  }
+
   .carte {
     width: 100%;
     margin: 0px;
@@ -1066,7 +1118,7 @@ Ordinateurs (992 px - 1199 px)
 
   .plan {
     position: absolute;
-    width: 100%;
+    overflow: hidden;
   }
 
   .plan::before {
@@ -1087,12 +1139,12 @@ Ordinateurs (992 px - 1199 px)
   .form {
     position: absolute;
     padding: 15px;
-    margin-left: 60%;
+    margin-left: 45%;
     margin-top: 75px;
     padding-top: 20px;
     background-color: rgba( 242, 243, 251, 0.9);
-    width: 30%;
-    height: 520px;
+    width: 45%;
+    height: 560px;
     border-radius: 5px;
   }
 }
