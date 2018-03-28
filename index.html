@@ -2,15 +2,15 @@
 <html lang="fr">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>WebAgency</title>
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <meta name="author" content="Patrice">
   <link rel="icon" type="image/png" href="images/favicon.ico" />
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <title>WebAgency</title>
   <meta name="description" content="Site de la WebAgency." />
+  <meta name="author" content="Patrice ANDREANI">
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="Site de la WebAgency">
@@ -29,12 +29,10 @@
 
 <body>
 
-
   <!-- Header -->
 
   <header>
   </header>
-
 
   <div class="main">
 
@@ -45,28 +43,27 @@
           <img src="images/logo.png" alt="logo de la webagency" id="logo_accueil">
         </div>
 
-
         <!-- menu hamburger -->
-<div class="menuh">
-  <nav id="nav-left" role="navigation">
-  <ul>
-    <li>
-      <a href="#" aria-label="Close Navigation">&#10799;</a>
-    </li>
-    <li><a href="#logo_accueil">Accueil</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projets">Portfolio</a></li>
-    <li><a href="#carte">Contact</a></li>
-  </ul>
-</nav>
+        <div class="menuh">
+          <nav id="nav-left" role="navigation">
+            <ul>
+              <li>
+                <a href="#" aria-label="Close Navigation">&#10799;</a>
+              </li>
+              <li><a href="#logo_accueil">Accueil</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projets">Portfolio</a></li>
+              <li><a href="#carte">Contact</a></li>
+            </ul>
+          </nav>
 
-<div id="wrapper">
-  <div id="menu-left">
-    <a href="#nav-left" class="open-menu" aria-label="Open Navigation">&#9776;</a>
-    <a href="#" class="close-menu" aria-label="Close Navigation">&#10799;</a>
-  </div>
-</div>
-</div>
+          <div id="wrapper">
+            <div id="menu-left">
+              <a href="#nav-left" class="open-menu" aria-label="Open Navigation">&#9776;</a>
+              <a href="#" class="close-menu" aria-label="Close Navigation">&#10799;</a>
+            </div>
+          </div>
+        </div>
         <!-- fin menu hamburger -->
 
         <div class="nav">
@@ -81,34 +78,36 @@
     </section>
 
     <!-- Section 2 : le slider -->
-
     <div id="slider">
 
       <div class="chevron1">
-        <i class="fas fa-chevron-left"></i>
+        <a href="#image1"><i class="fas fa-chevron-left"></i></a>
       </div>
 
       <div class="textet">
-        <p><H1><strong>WEBAGENCY</strong>: L'AGENCE DE TOUS<br>VOS PROJETS</H1>
+        <p>
+          <H1><strong>WEBAGENCY</strong>: L'AGENCE DE TOUS<br>VOS PROJETS</H1>
           <p><br>Vous avez un projet web ? La WebAgency vous aide à le réaliser!</p>
           <p><a href="#" class="w3-button w3-black">Plus d'infos</a></p>
       </div>
 
-      <figure>
-        <img src="images/slider/bg1.jpg" alt="slide 1">
-      </figure>
+      <div class="sliderimg">
+        <a id="image1" class="none"></a>
+        <a id="image2" class="none"></a>
+        <div class="images">
+          <img src="images/slider/bg1.jpg" alt="slide1">
 
-        <figure>
-        <img src="images/slider/bg2.jpg" alt="slide 2">
-      </figure>
+          <img src="images/slider/bg2.jpg" alt="slide2">
+        </div>
+      </div>
+
       <div class="chevron2">
-        <i class="fas fa-chevron-right"></i>
+        <a href="#image2"><i class="fas fa-chevron-right"></i></a>
       </div>
     </div>
 
 
     <!-- Section 3 : présentation des services de l'agence -->
-
     <section id="services">
       <div class="services1">
         <H2>NOS SERVICES</H2><br>
@@ -166,15 +165,10 @@
         </div>
 
         <div class="menu2">
-
           <a href="#" class="w3-button w3-black">All Works</a>
-
           <a href="#" class="w3-button w3-black">Creative</a>
-
           <a href="#" class="w3-button w3-black">Corporate</a>
-
           <a href="#" class="w3-button w3-black">Portfolio</a>
-
         </div>
       </div>
 
@@ -291,22 +285,8 @@
           </div>
         </div>
 
-      <!--  <div class="row">
-          <div class="column">
-            <figure class="img">
-              <a href="images/portfolio/full-min.jpg"><img src="images/portfolio/full.jpg" alt="Récapitulatif" style="width:100%"></a>
-              <figcaption>
-                <div class="presentation">
-                  <div class="texte"><strong>Porfolio item 9</strong><br>Récapitulatif</div>
-                  <div class="icone1"><i class="fas fa-eye"></i></div>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        </div> -->
       </div>
     </section>
-
 
     <!-- Section 5 : partie contact avec une carte et coordonnées -->
     <section id="carte">
@@ -340,7 +320,7 @@
 
     <footer>
     </footer>
+
   </div>
 </body>
-
 </html>

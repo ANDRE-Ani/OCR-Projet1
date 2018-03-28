@@ -47,7 +47,6 @@ p {
   display: none;
 }
 
-/* slider */
 
 .textet {
   position: absolute;
@@ -78,19 +77,36 @@ p {
   border-width: 0px;
 }
 
-.slider {
+ .slider {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
+.sliderimg {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 447px;
+}
 
-#slider aside {
-  position: absolute;
-  width: 100%;
-  margin-top: 90px;
-  text-align: left;
-  margin-left: 70px;
+.none {
+    display: none;
+}
+
+.images {
+    position: absolute;
+    white-space: nowrap;
+    width: 200%;
+    transition:left 1s;
+}
+
+#image1:target~.images {
+    left: 0;
+}
+
+#image2:target~.images {
+    left: -1300px;
 }
 
 #slider p {
@@ -116,71 +132,18 @@ p {
   color: #5cabcf;
 }
 
-div#slider figure {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  text-align: left;
-}
-
-div#slider figure img {
-  width: 50%;
-  height: auto;
-  float: left;
-}
-
-div#slider {
-  width: 100%;
-  overflow: hidden;
-}
-
-@keyframes slidy {
-  0% {
-    left: 0%;
-  }
-  20% {
-    left: 0%;
-  }
-  25% {
-    left: -0%;
-  }
-  45% {
-    left: -0%;
-  }
-  50% {
-    left: -100%;
-  }
-  85% {
-    left: -100%;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-div#slider figure {
-  position: relative;
-  width: 200%;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  left: 0;
-  text-align: left;
-  animation: 20s slidy infinite;
-}
-
 .fa-chevron-left {
   width: 25px;
   height: 40px;
   border-radius: 0 50px 50px 0;
+  color: white;
 }
 
 .fa-chevron-right {
   width: 25px;
   height: 40px;
   border-radius: 50px 0 0 50px;
+  color: white;
 }
 
 
@@ -188,7 +151,6 @@ div#slider figure {
   position: absolute;
   left: 0px;
   top: 310px;
-  color: white;
   font-size: 45px;
   z-index: 2;
   width: 50px;
@@ -203,7 +165,6 @@ div#slider figure {
   position: absolute;
   right: 0px;
   top: 310px;
-  color: white;
   font-size: 45px;
   z-index: 2;
   width: 50px;
