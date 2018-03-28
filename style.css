@@ -21,6 +21,7 @@ Site de la WebAgency */
 H1 {
   text-align: center;
   font-size: 32px;
+  width: 100%;
 }
 
 H2 {
@@ -38,6 +39,10 @@ p {
   margin: 20px 15px 15px 145px;
 }
 
+.header {
+  width: 100%;
+}
+
 .menuh {
   display: none;
 }
@@ -47,7 +52,7 @@ p {
 .textet {
   position: absolute;
   z-index: 4;
-  width: 100%;
+  width: 80%;
   left: 90px;
   margin-top: 100px;
 }
@@ -57,13 +62,21 @@ p {
   color: white;
   text-align: center;
   top: 100px;
-  width: 100px;
+  width: 120px;
   height: auto;
   font-weight: bold;
-  border-radius: 15px;
   border-bottom: 2px solid #4494bb;
 }
 
+.textet .w3-button.w3-black:last-child {
+  border-radius: 3px 3px 3px 3px;
+}
+
+.textet .w3-button.w3-black:hover:after {
+  top: 100%;
+  left: 50%;
+  border-width: 0px;
+}
 
 .slider {
   width: 100%;
@@ -158,37 +171,47 @@ div#slider figure {
   animation: 20s slidy infinite;
 }
 
+.fa-chevron-left {
+  width: 25px;
+  height: 40px;
+  border-radius: 0 50px 50px 0;
+}
+
+.fa-chevron-right {
+  width: 25px;
+  height: 40px;
+  border-radius: 50px 0 0 50px;
+}
+
+
 .chevron1 {
   position: absolute;
-  margin-top: 200px;
+  left: 0px;
+  top: 310px;
   color: white;
-  float: left;
   font-size: 45px;
-  margin-left: -25px;
   z-index: 2;
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+  width: 50px;
+  height: 90px;
+  border-radius: 0 50px 50px 0;
   box-shadow: 0px 0px 15px #181c25;
-  padding: 0.5em 0.8em;
+  padding: 0.5em 0.2em;
   background-color: rgba( 48, 33, 29, 0.4 );
 }
 
 .chevron2 {
   position: absolute;
-  margin-top: -250px;
-  margin-left: 95%;
+  right: 0px;
+  top: 310px;
   color: white;
-  float: right;
   font-size: 45px;
-  margin-right: 0px;
   z-index: 2;
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  box-shadow: 0px 0px 2px #181c25;
+  width: 50px;
+  height: 90px;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0px 0px 15px #181c25;
   padding: 0.5em 0.5em;
-  background-color: rgba( 48, 33, 29, 0.5 );
+  background-color: rgba( 48, 33, 29, 0.4 );
 }
 
 .services-image {
@@ -460,6 +483,7 @@ ul.icon li.chart-pie:before {
 /* images du portfolio */
 
 .figure {
+  width: 100%;
   padding: 10px;
   margin: 10px;
   width: 25%;
