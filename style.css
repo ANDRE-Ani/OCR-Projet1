@@ -84,7 +84,10 @@ p {
 
 .textet .w3-button.w3-black:hover {
   color: black;
-  background-color: #4494bb;
+  background-color: #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
 }
 
  .slider {
@@ -111,6 +114,8 @@ p {
     width: 200%;
     transition: left 3s;
     transition-timing-function: ease-in;
+    -webkit-transition: left 3s;
+    -webkit-transition-timing-function: ease-in;
 }
 
 #image1:target~.images {
@@ -476,6 +481,7 @@ ul.icon li.chart-pie:before {
   padding-left: 10px;
   padding-right: 10px;
   transition: 0.3s;
+  -webkit-transition: 0.3s;
   border-top: 3px solid #5CADD3;
 }
 
@@ -502,6 +508,7 @@ figure:hover figcaption {
   height: 40%;
   color: white;
   transition: all 1s;
+  -webkit-transition: all 1s;
   opacity: 1;
   padding: 0px;
   margin: 0px;
@@ -586,17 +593,33 @@ figure:hover figcaption {
 
 .carte {
   width: 100%;
+  height: 650px;
   margin: 0px;
   position: relative;
   border: none;
-}
+  }
 
 .plan {
-  position: absolute;
   overflow: hidden;
+  padding-bottom: 56.25%;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 
-.plan::before {
+.iframe {
+  pointer-events: initial;
+}
+
+.plan iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.plan::after {
   content: "";
   position: absolute;
   left: 0;
@@ -607,17 +630,12 @@ figure:hover figcaption {
   pointer-events: none;
 }
 
-.iframe {
-  pointer-events: initial;
-}
-
 
 .form {
-  position: absolute;
   padding: 15px;
   margin-left: 60%;
-  margin-top: 75px;
-  padding-top: 20px;
+  position: absolute;
+  margin-top: 90px;
   background-color: rgba( 242, 243, 251, 0.9);
   width: 30%;
   height: 520px;
@@ -755,6 +773,7 @@ nav {
     width: 400px;
     z-index: 999;
     transition: left 0.75s;
+    -webkit-transition: left 0.75s;
     box-shadow: 3px 0 10px rgba(0,0,0,0.2);
 }
 
@@ -798,6 +817,7 @@ nav {
 #nav-left:target {
     left: 0;
     transition: left 0.75s;
+    -webkit-transition: left 0.75s;
 }
 
 .open-menu,
@@ -870,6 +890,7 @@ Ordinateurs (992 px - 1199 px)
       width: 400px;
       z-index: 999;
       transition: left 0.75s;
+      -webkit-transition: left 0.75s;
       box-shadow: 3px 0 10px rgba(0,0,0,0.2);
   }
 
@@ -914,6 +935,7 @@ Ordinateurs (992 px - 1199 px)
   #nav-left:target {
       left: 0;
       transition: left 0.75s;
+      -webkit-transition: left 0.75s;
   }
 
   .open-menu,
@@ -1120,6 +1142,7 @@ Ordinateurs (992 px - 1199 px)
 
   .carte {
     width: 100%;
+    height: auto;
     margin: 0px;
     position: relative;
     border: none;
@@ -1128,6 +1151,8 @@ Ordinateurs (992 px - 1199 px)
   .plan {
     position: absolute;
     overflow: hidden;
+    width: 100%;
+    height: auto;
   }
 
   .plan::before {
@@ -1149,11 +1174,11 @@ Ordinateurs (992 px - 1199 px)
     position: absolute;
     padding: 15px;
     margin-left: 45%;
-    margin-top: 75px;
+    margin-top: 25px;
     padding-top: 20px;
     background-color: rgba( 242, 243, 251, 0.9);
     width: 45%;
-    height: 560px;
+    height: 500px;
     border-radius: 5px;
   }
 }
