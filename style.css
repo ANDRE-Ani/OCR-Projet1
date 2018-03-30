@@ -958,7 +958,8 @@ Ordinateurs (992 px - 1199 px)
   }
 
   .logo {
-    width: 100%;
+    width: 50%;
+    margin:auto;
   }
 
   .nav {
@@ -1133,9 +1134,9 @@ Ordinateurs (992 px - 1199 px)
   }
 
   .services2 {
-    width: 100%;
+    width: 90%;
     text-align: center;
-    margin: 30px;
+    margin: auto;
   }
 
   .portfolio img {
