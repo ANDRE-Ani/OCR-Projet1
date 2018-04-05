@@ -48,6 +48,7 @@ p {
 }
 
 /* texte sur image slider */
+
 .textet {
   position: absolute;
   z-index: 4;
@@ -91,22 +92,26 @@ p {
   transition: all 0.8s ease;
 }
 
+.target {
+  display: none;
+}
+
 .slider-holder {
   width: 100%;
+  height: auto;
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  text-align: center;
   overflow: hidden;
 }
 
 .image-holder {
-  width: 2600px;
   background-color: white;
-  height: 447px;
+  height: auto;
   clear: both;
   position: relative;
-  -webkit-transition: left 2s;
-  -moz-transition: left 2s;
-  -o-transition: left 2s;
-  transition: left 2s;
 }
 
 .slider-image {
@@ -116,12 +121,51 @@ p {
   position: relative;
 }
 
+#slider-holder .img {
+  max-width: 100%;
+  height: auto;
+}
+
+#slider-image-1 {
+  display: none;
+}
+
+#slider-image-2 {
+  display: none;
+}
+
 #slider-image-1:target~.image-holder {
-  left: 0px;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+  left: 0%;
 }
 
 #slider-image-2:target~.image-holder {
-  left: -1300px;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+  left: -100%;
+}
+
+div#slider-holder figure {
+  background-color: white;
+  height: auto;
+  clear: both;
+  position: relative;
+  width: 200%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: left;
+}
+
+div#slider-holder figure img {
+  width: 50%;
+  height: auto;
+  float: left;
 }
 
 #slider-holder p {
@@ -151,6 +195,16 @@ p {
   height: 40px;
   border-radius: 0 50px 50px 0;
   color: white;
+  -moz-transition-property: color;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.fa-chevron-left:hover {
+  color: #5cadd3;
 }
 
 .fa-chevron-right {
@@ -158,6 +212,16 @@ p {
   height: 40px;
   border-radius: 50px 0 0 50px;
   color: white;
+  -moz-transition-property: color;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.fa-chevron-right:hover {
+  color: #5cadd3;
 }
 
 .chevron1 {
@@ -210,6 +274,7 @@ p {
 }
 
 /* icônes fontawesome pour la partie services */
+
 ul.icon li.cubes:before {
   font-family: fontawesome;
   content: "\f1b3";
@@ -256,6 +321,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* section logo et menu principal */
+
 .menu {
   display: flex;
   width: 100%;
@@ -265,6 +331,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* menu du portfolio */
+
 .menu2 {
   width: 100%;
   display: inline-block;
@@ -316,6 +383,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* icone et point dans nos services */
+
 .separator2 {
   width: 15px;
   height: 15px;
@@ -341,6 +409,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* rond/trait sous les titres */
+
 .rond-point {
   width: 15px;
   height: 15px;
@@ -389,6 +458,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* navigation menu principal */
+
 .nav {
   width: 50%;
   height: 45px;
@@ -402,6 +472,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* navigation menu portfolio */
+
 .projet_menu nav {
   width: 100%;
   margin: auto;
@@ -452,6 +523,7 @@ ul.icon li.chart-pie:before {
 }
 
 /* images du portfolio */
+
 .figure {
   width: 100%;
   padding: 10px;
@@ -534,15 +606,12 @@ figure:hover figcaption {
   height: 2em;
   background-color: white;
   margin-left: -9px;
-
   -moz-transition-property: all;
   -moz-transition-duration: 0.3s;
   -moz-transition-timing-function: ease-in;
-
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-in;
-
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
@@ -723,6 +792,7 @@ hr {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 40px;
+  padding-top: 10px;
 }
 
 .services1 {
@@ -774,82 +844,6 @@ hr {
   margin-left: -10px;
 }
 
-/* menu hamburger */
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-nav {
-  background: #3491b2;
-  left: 0;
-  position: fixed;
-  height: 300px;
-  top: 0;
-  left: -395px;
-  width: 400px;
-  z-index: 999;
-  -moz-transition: left 0.75s;
-  -webkit-transition: left 0.75s;
-  transition: left 0.75s;
-  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#nav-left ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#nav-left ul li a {
-  color: #ecf0f1;
-  display: block;
-  font-size: 2em;
-  line-height: 1em;
-  margin-bottom: 20px;
-  outline: none;
-  text-decoration: none;
-  text-align: center;
-}
-
-#wrapper {
-  margin: 0 auto;
-  padding: 0 5px;
-  position: relative;
-  width: 950px;
-}
-
-#menu-left:not(target) {
-  cursor: pointer;
-  position: absolute;
-  right: 1%;
-  top: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 25px;
-  line-height: 25px;
-}
-
-#nav-left:target {
-  left: 0;
-  -moz-transition: left 0.75s;
-  -webkit-transition: left 0.75s;
-  transition: left 0.75s;
-}
-
-.open-menu, #nav-left:target~* .close-menu {
-  display: block;
-}
-
-.close-menu, #nav-left:target~* .open-menu {
-  display: none;
-}
-
-/* fin menu hamburger */
-
-
 /* mediaqueries et taille d'écran
 Smartphones < 480 px
 
@@ -858,32 +852,7 @@ Tablettes (768 px - 991 px)
 Ordinateurs (992 px - 1199 px)
 */
 
-/* media queries responsive pour les smartphones */
-@media screen and (max-width:480px) {
-  * {
-    box-sizing: border-box;
-    margin: 0px;
-  }
-  .main {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
-  }
-  .body {
-    width: 100%;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-  }
-  .menuh {
-    display: contents;
-  }
-  .chevron1 {
-    display: none;
-  }
-  .chevron2 {
-    display: none;
-  }
-
+@media screen and (max-width:650px) {
   /* menu hamburger */
   a {
     color: #000;
@@ -910,7 +879,7 @@ Ordinateurs (992 px - 1199 px)
   #nav-left ul li a {
     color: #ecf0f1;
     display: block;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1em;
     margin-bottom: 20px;
     outline: none;
@@ -949,7 +918,34 @@ Ordinateurs (992 px - 1199 px)
     display: none;
   }
   /* fin menu hamburger */
+}
 
+/* media queries responsive pour les smartphones */
+
+@media screen and (max-width:480px) {
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+  }
+  .main {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+  }
+  .body {
+    width: 100%;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .menuh {
+    display: contents;
+  }
+  .chevron1 {
+    display: none;
+  }
+  .chevron2 {
+    display: none;
+  }
   .sec1 {
     width: 100%;
     display: flex;
@@ -979,10 +975,10 @@ Ordinateurs (992 px - 1199 px)
     height: auto;
   }
   .services2 {
-    width: 100%;
+    width: 90%;
     text-align: center;
     margin-top: 70px;
-    margin: 20px;
+    margin: 10%;
   }
   .menu2 {
     display: flex;
@@ -1043,8 +1039,8 @@ Ordinateurs (992 px - 1199 px)
     left: 0;
   }
   .form {
-    width: 100%;
-    margin: 0px;
+    width: 90%;
+    margin: 10%;
     padding: 10px;
   }
   .carte {
@@ -1057,7 +1053,7 @@ Ordinateurs (992 px - 1199 px)
   .portfolio {
     display: flex;
     flex-direction: column;
-    height: 750px;
+    height: initial;
   }
   .menu2 {
     width: 100%;
@@ -1066,6 +1062,7 @@ Ordinateurs (992 px - 1199 px)
 }
 
 /* media queries responsive pour les tablettes */
+
 @media screen and (min-width:480px) and (max-width:991px) {
   * {
     box-sizing: border-box;
@@ -1098,14 +1095,53 @@ Ordinateurs (992 px - 1199 px)
     display: flex;
     flex-direction: column;
   }
+  #slider-holder H1 {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    margin-left: 60px;
+  }
+  #slider-holder p {
+    position: absolute;
+    margin-top: 80px;
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    margin-left: 60px;
+  }
+  .textet {
+    position: absolute;
+    z-index: 4;
+    width: 80%;
+    left: 60px;
+    margin-top: 60px;
+  }
+  .textet .w3-button.w3-black {
+    background: #5cadd3;
+    color: white;
+    text-align: center;
+    top: 70px;
+    width: 120px;
+    left: 10px;
+    height: auto;
+    font-weight: bold;
+    border-bottom: 2px solid #4494bb;
+  }
   .services-image {
     width: 100%;
     margin: 0px;
   }
   .services2 {
-    width: 90%;
+    width: 100%;
     text-align: center;
-    margin: auto;
+    padding: 10px;
+    margin: 0;
+  }
+  .present {
+    width: 100%;
+    padding-left: 15px;
   }
   .portfolio img {
     width: 50%;
@@ -1142,7 +1178,7 @@ Ordinateurs (992 px - 1199 px)
   .form {
     position: absolute;
     padding: 15px;
-    margin-left: 45%;
+    margin: 25%;
     margin-top: 25px;
     padding-top: 20px;
     background-color: rgba( 242, 243, 251, 0.9);
