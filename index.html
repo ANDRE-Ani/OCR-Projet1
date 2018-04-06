@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
   <!-- definition du viewport -->
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="Site de la WebAgency">
@@ -45,12 +45,12 @@
     <section id="menu">
       <div id="sec1">
         <div class="logo">
-          <img src="images/logo.png" alt="logo de la webagency" id="logo_accueil">
+          <a href="http://p1ocr.andre-ani.fr" title="Site internet de la WebAgency"><img src="images/logo.png" alt="logo de la webagency" id="logo_accueil"></a>
         </div>
 
         <!-- menu hamburger -->
         <div class="menuh">
-          <nav id="nav-left" role="navigation">
+          <nav id="nav-left">
             <ul>
               <li>
                 <a href="#" aria-label="Close Navigation">&#10799;</a>
@@ -86,7 +86,7 @@
     <div class="slider-holder" id="slider-holder">
 
       <div class="textet">
-        <p><h1><span class="couleur">WEBAGENCY</span>: L'AGENCE DE TOUS VOS PROJETS !</h1></p>
+        <h1><span class="couleur">WEBAGENCY</span>: L'AGENCE DE TOUS VOS PROJETS !</h1>
         <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser!</p>
         <p><a href="#services" class="w3-button w3-black">Plus d'infos</a></p>
       </div>
@@ -96,8 +96,8 @@
 
       <div class="image-holder">
         <figure>
-          <img src="images/slider/bg1.jpg" alt="slide1" class="slider-image" />
-          <img src="images/slider/bg2.jpg" alt="slide2" class="slider-image" />
+          <img src="images/slider/bg1.jpg" alt="image slide 1" class="slider-image" />
+          <img src="images/slider/bg2.jpg" alt="image slide 2" class="slider-image" />
         </figure>
       </div>
 
@@ -275,7 +275,7 @@
         <div class="row">
           <div class="column">
             <figure class="img">
-              <a href="images/portfolio/08.jpg"><img src="images/portfolio/08.jpg" alt="Fourniture de bureau" style="width:100%"></a>
+              <a href="images/portfolio/08.jpg"><img src="images/portfolio/08.jpg" alt="Fournitures de bureau" style="width:100%"></a>
               <figcaption>
                 <div class="presentation">
                   <div class="texte"><strong>Porfolio item 8</strong><br>Nouveau site</div>
@@ -304,12 +304,10 @@
             </legend>
             <p><strong>WebAgensy SAS</strong><br> 25, rue d'Hauteville, 75010 Paris<br> Tél : 01.02.03.04.05</p>
           </fieldset>
-          <input type="text" name="nom" id="nom" value="Nom" required />
-          <input type="text" name="email" id="email" value="Email" required />
-          <input type="text" name="sujet" id="sujet" value="Sujet" required />
-          <textarea name="message" id="message" rows="10" required>
-              Message
-            </textarea><br>
+          <input type="text" name="nom" id="nom" value="Nom" placeholder="Votre nom" required />
+          <input type="email" name="email" id="email" value="Email" placeholder="Votre email" required />
+          <input type="text" name="sujet" id="sujet" value="Sujet" placeholder="Sujet du message" required />
+          <textarea name="message" id="message" rows="10"  placeholder="Votre message" required>Votre message</textarea><br>
           <div class="button">
             <button type="submit" id="formulaire"><strong>Envoyer votre message</strong></button>
           </div>
