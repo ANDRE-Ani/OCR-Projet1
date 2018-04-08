@@ -231,21 +231,21 @@ div#slider-holder figure img {
 .chevron1 {
   position: absolute;
   left: 0px;
-  top: 310px;
+  top: 260px;
   font-size: 45px;
   z-index: 2;
   width: 50px;
   height: 90px;
   border-radius: 0 50px 50px 0;
   box-shadow: 0px 0px 15px #181c25;
-  padding: 0.5em 0.2em;
+  padding: 0.5em 0.5em 0.5em 0em;
   background-color: rgba( 48, 33, 29, 0.4);
 }
 
 .chevron2 {
   position: absolute;
   right: 0px;
-  top: 310px;
+  top: 260px;
   font-size: 45px;
   z-index: 2;
   width: 50px;
@@ -277,7 +277,8 @@ div#slider-holder figure img {
   list-style-type: none;
 }
 
-/* icônes fontawesome pour la partie services */
+/* icônes fontawesome pour la partie
+services */
 ul.icon li.cubes:before {
   font-family: fontawesome;
   content: "\f1b3";
@@ -306,17 +307,11 @@ ul.icon li.chart-pie:before {
   text-indent: 0.1em;
 }
 
-/* sticky menu */
 #sec1 {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  height: 85px;
+  height: 35px;
 }
 
 .section3 {
@@ -332,7 +327,7 @@ ul.icon li.chart-pie:before {
 /* section logo et menu principal */
 #menu {
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
 
 /* menu du portfolio */
@@ -465,7 +460,8 @@ ul.icon li.chart-pie:before {
   height: 45px;
   list-style: none;
   margin-top: 20px;
-  right: 30px;
+  right: 0;
+  left: 5px;
 }
 
 .projet_menu {
@@ -535,8 +531,8 @@ ul.icon li.chart-pie:before {
   font-size: 16px;
   margin-top: 20px;
   list-style: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .nav a:link {
@@ -800,6 +796,9 @@ hr {
   padding-top: 10px;
 }
 
+#services {
+  margin-top: 75px;
+}
 .services1 {
   margin-bottom: 0px;
   margin-top: 10px;
@@ -819,7 +818,7 @@ hr {
   background: #e5e5e5;
   color: black;
   text-decoration: none;
-  width: 100px;
+  width: 110px;
   height: auto;
   padding: 15px;
   text-align: center;
@@ -858,7 +857,8 @@ Ordinateurs (992 px - 1199 px)
 */
 
 @media screen and (max-width:550px) {
-/* enlève le slider si on descend sous 550px */
+/* enlève le slider si on descend
+sous 550px */
 .slider-holder {
   display: none;
   }
@@ -874,10 +874,10 @@ Ordinateurs (992 px - 1199 px)
     background: #3491b2;
     left: 0;
     position: fixed;
-    height: 100%;
+    height: 220px;
     top: 0;
     left: -395px;
-    width: 400px;
+    width: 310px;
     z-index: 999;
     -moz-transition: left 0.75s;
     -webkit-transition: left 0.75s;
@@ -902,7 +902,7 @@ Ordinateurs (992 px - 1199 px)
     margin: 0 auto;
     padding: 0 5px;
     position: relative;
-    width: 950px;
+    width: 930px;
   }
   #menu-left:not(target) {
     cursor: pointer;
@@ -933,7 +933,8 @@ Ordinateurs (992 px - 1199 px)
 
 }
 
-/* media queries responsive pour les smartphones */
+/* media queries responsive pour
+les smartphones */
 @media screen and (max-width:480px) {
   * {
     box-sizing: border-box;
@@ -951,6 +952,7 @@ Ordinateurs (992 px - 1199 px)
   }
   .menuh {
     display: contents;
+    width: 50%;
   }
   .chevron1 {
     display: none;
@@ -958,18 +960,25 @@ Ordinateurs (992 px - 1199 px)
   .chevron2 {
     display: none;
   }
-  .sec1 {
+  #sec1 {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 30px;
   }
   .logo {
-    width: 50%;
-    margin: auto;
+    width: 40%;
+    margin: 0;
   }
   .nav {
     display: none;
   }
+
+  .logo img {
+    margin: 0;
+    transform: scale(0.4, 0.4);
+    -moz-transform: scale(0.4, 0.4);
+    -webkit-transform: scale(0.4, 0.4);
+  }
+
   #slider-holder {
     display: none;
   }
@@ -978,9 +987,10 @@ Ordinateurs (992 px - 1199 px)
     display: flex;
     flex-direction: column;
   }
+
   .services-image {
     width: 100%;
-    margin: 0px;
+    margin: 0;
   }
   .services-image img {
     width: 90%;
@@ -1011,7 +1021,7 @@ Ordinateurs (992 px - 1199 px)
     background: #e5e5e5;
     color: black;
     text-decoration: none;
-    width: 100px;
+    width: 110px;
     height: auto;
     padding: 15px;
     text-align: center;
@@ -1074,7 +1084,8 @@ Ordinateurs (992 px - 1199 px)
   }
 }
 
-/* media queries responsive pour les tablettes */
+/* media queries responsive pour
+les tablettes */
 @media screen and (min-width:480px) and (max-width:991px) {
   * {
     box-sizing: border-box;
@@ -1090,18 +1101,25 @@ Ordinateurs (992 px - 1199 px)
     margin: 0px;
     font-family: 'Roboto', sans-serif;
   }
-  .sec1 {
-    width: 25%;
+  #sec1 {
+    width: 100%;
+    position: flex;
   }
   .textet {
     width: 80%;
   }
   .nav {
-    width: 75%;
+    width: 65%;
   }
   .logo {
     width: 25%;
     margin-left: 20px;
+  }
+  .logo img {
+    margin: 0;
+    transform: scale(0.6, 0.6);
+    -moz-transform: scale(0.6, 0.6);
+    -webkit-transform: scale(0.6, 0.6);
   }
   .section3 {
     display: flex;
