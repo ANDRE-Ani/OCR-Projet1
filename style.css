@@ -322,6 +322,7 @@ ul.icon li.chart-pie:before {
 #projets {
   width: 100%;
   background-color: #F5F5F5;
+  padding-top: 55px;
 }
 
 /* section logo et menu principal */
@@ -679,12 +680,13 @@ figure:hover figcaption {
   padding-left: 0px;
 }
 
-.carte {
+#carte {
   width: 100%;
   height: 650px;
   margin: 0px;
   position: relative;
   border: none;
+  padding-top: 70px;
 }
 
 .plan {
@@ -798,8 +800,10 @@ fieldset p {
 }
 
 #services {
-  margin-top: 75px;
+  padding-top: 75px;
+  margin-top: 70px;
 }
+
 .services1 {
   margin-bottom: 0px;
   margin-top: 10px;
