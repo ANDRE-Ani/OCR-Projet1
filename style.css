@@ -4,18 +4,17 @@ Site de la WebAgency */
 * {
   box-sizing: border-box;
   margin: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main {
   width: 100%;
-  font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
 
 .body {
   width: 100%;
   margin: 0px;
-  font-family: 'Roboto', sans-serif;
 }
 
 H1 {
@@ -69,9 +68,9 @@ p {
   background: #5cadd3;
   color: white;
   text-align: center;
-  top: 90px;
+  top: 35px;
   width: 120px;
-  left: 10px;
+  left: 5px;
   height: auto;
   font-weight: bold;
   border-bottom: 2px solid #4494bb;
@@ -100,7 +99,7 @@ p {
   display: none;
 }
 
-.slider-holder {
+#slider-holder {
   width: 100%;
   height: auto;
   background-color: white;
@@ -109,6 +108,7 @@ p {
   margin-top: 85px;
   text-align: center;
   overflow: hidden;
+  position: relative;
 }
 
 .image-holder {
@@ -173,8 +173,8 @@ div#slider-holder figure img {
 }
 
 #slider-holder p {
-  position: absolute;
-  margin-top: 100px;
+  position: relative;
+  margin-top: 20px;
   font-size: 15px;
   color: white;
   text-align: left;
@@ -184,7 +184,7 @@ div#slider-holder figure img {
 #slider-holder H1 {
   font-size: 40px;
   color: white;
-  position: absolute;
+  position: relative;
   width: 100%;
   text-align: left;
   margin-left: 70px;
@@ -231,7 +231,7 @@ div#slider-holder figure img {
 .chevron1 {
   position: absolute;
   left: 0px;
-  top: 260px;
+  top: 40%;
   font-size: 45px;
   z-index: 2;
   width: 50px;
@@ -245,7 +245,7 @@ div#slider-holder figure img {
 .chevron2 {
   position: absolute;
   right: 0px;
-  top: 260px;
+  top: 40%;
   font-size: 45px;
   z-index: 2;
   width: 50px;
@@ -327,7 +327,13 @@ ul.icon li.chart-pie:before {
 /* section logo et menu principal */
 #menu {
   width: 100%;
+  height: 85px;
   margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: white;
 }
 
 /* menu du portfolio */
@@ -739,6 +745,7 @@ button {
   border: none;
   border-bottom-style: solid;
   border-bottom-color: #4494bb;
+  cursor: pointer;
 }
 
 #formulaire:hover {
@@ -781,12 +788,6 @@ fieldset p {
   margin: 0px;
   padding: 0px;
   text-align: left;
-}
-
-hr {
-  display: block;
-  width: 10%;
-  color: #F7F7F7;
 }
 
 .projets1 {
@@ -859,9 +860,39 @@ Ordinateurs (992 px - 1199 px)
 @media screen and (max-width:550px) {
 /* enlève le slider si on descend
 sous 550px */
-.slider-holder {
-  display: none;
+
+#slider-holder figure {
+  visibility: hidden;
   }
+
+  #slider-holder p {
+    visibility: hidden;
+  }
+
+  #slider-holder {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    left: -90px;
+    top: -40px;
+  }
+
+  #slider-holder H1 {
+    font-size: 20px;
+    color: #5cacd2;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: -100px;
+  }
+
+  .chevron1 {
+    display: none;
+  }
+  .chevron2 {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width:650px) {
@@ -938,32 +969,31 @@ les smartphones */
 @media screen and (max-width:480px) {
   * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
   }
   .main {
     width: 100%;
-    font-family: 'Roboto', sans-serif;
     margin: 0px;
   }
   .body {
     width: 100%;
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
   }
   .menuh {
     display: contents;
     width: 50%;
   }
-  .chevron1 {
-    display: none;
-  }
-  .chevron2 {
-    display: none;
-  }
+
   #sec1 {
     width: 100%;
     margin-bottom: 30px;
   }
+
+  #menu {
+    position: relative;
+  }
+
   .logo {
     width: 40%;
     margin: 0;
@@ -979,9 +1009,6 @@ les smartphones */
     -webkit-transform: scale(0.4, 0.4);
   }
 
-  #slider-holder {
-    display: none;
-  }
   .section3 {
     width: 100%;
     display: flex;
@@ -1007,7 +1034,10 @@ les smartphones */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: auto;
   }
+
   .menu2 button {
     background-color: #4CAF50;
     border: none;
@@ -1078,10 +1108,7 @@ les smartphones */
     flex-direction: column;
     height: initial;
   }
-  .menu2 {
-    width: 100%;
-    margin: auto;
-  }
+
 }
 
 /* media queries responsive pour
@@ -1103,11 +1130,9 @@ les tablettes */
   }
   #sec1 {
     width: 100%;
-    position: flex;
+    display: flex;
   }
-  .textet {
-    width: 80%;
-  }
+
   .nav {
     width: 65%;
   }
@@ -1142,8 +1167,6 @@ les tablettes */
     margin-left: 60px;
   }
   .textet {
-    position: absolute;
-    z-index: 4;
     width: 80%;
     left: 40px;
     margin-top: 35px;
@@ -1162,7 +1185,7 @@ les tablettes */
   .chevron1 {
     position: absolute;
     left: 0px;
-    top: 240px;
+    top: 45%;
     font-size: 35px;
     z-index: 2;
     width: 35px;
@@ -1176,7 +1199,7 @@ les tablettes */
   .chevron2 {
     position: absolute;
     right: 0px;
-    top: 240px;
+    top: 45%;
     font-size: 35px;
     z-index: 2;
     width: 35px;
